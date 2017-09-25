@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.16, created on 2014-06-15 12:56:55
+<?php /* Smarty version Smarty-3.1.16, created on 2017-09-25 09:27:12
          compiled from "tpl\admin\newslist.html" */ ?>
 <?php /*%%SmartyHeaderCode:15668539d93e66b70b9-78548279%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '79b02dc9ee4a4edeacd766122de7f48dbfba6d8a' => 
     array (
       0 => 'tpl\\admin\\newslist.html',
-      1 => 1402837010,
+      1 => 1506331630,
       2 => 'file',
     ),
   ),
@@ -107,7 +107,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 				<table class="tablesorter" cellspacing="0" style="margin:0"> 
 					<thead> 
 						<tr>  
-			    				<th>ID</th>
 			    				<th>标题</th>
 			    				<th>作者</th>
 			    				<th>操作</th>
@@ -120,8 +119,6 @@ foreach ($_from as $_smarty_tpl->tpl_vars['value']->key => $_smarty_tpl->tpl_var
 $_smarty_tpl->tpl_vars['value']->_loop = true;
 ?>
 						<tr>
-			    				<td><?php echo $_smarty_tpl->tpl_vars['value']->value['id'];?>
-</td> 
 			    				<td><?php echo $_smarty_tpl->tpl_vars['value']->value['title'];?>
 </td> 
 			    				<td><?php echo $_smarty_tpl->tpl_vars['value']->value['author'];?>

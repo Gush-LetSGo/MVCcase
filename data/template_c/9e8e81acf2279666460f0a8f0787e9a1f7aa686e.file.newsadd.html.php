@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.16, created on 2014-06-15 13:06:10
+<?php /* Smarty version Smarty-3.1.16, created on 2017-09-25 09:54:50
          compiled from "tpl\admin\newsadd.html" */ ?>
 <?php /*%%SmartyHeaderCode:6331539d9265713ae2-57639055%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '9e8e81acf2279666460f0a8f0787e9a1f7aa686e' => 
     array (
       0 => 'tpl\\admin\\newsadd.html',
-      1 => 1402837523,
+      1 => 1506333288,
       2 => 'file',
     ),
   ),
@@ -38,6 +38,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 	<script src="img/js/hideshow.js" type="text/javascript"></script>
 	<script src="img/js/jquery.tablesorter.min.js" type="text/javascript"></script>
 	<script type="text/javascript" src="img/js/jquery.equalHeight.js"></script>
+	<script charset="utf-8" src="img/js/ueditor/ueditor.config.js"></script>
+	<script charset="utf-8" src="img/js/ueditor/ueditor.all.js"> </script>
+	<script charset="utf-8" src="img/js/ueditor/lang/zh-cn/zh-cn.js"></script>
 	<script type="text/javascript">
 	$(document).ready(function() 
     	{ 
@@ -69,7 +72,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     $(function(){
         $('.column').equalHeight();
     });
-</script>
+    
+    var ue = UE.getEditor('editor');
+	</script>
 
 </head>
 
@@ -107,9 +112,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 ">
 							</fieldset>
 							<fieldset>
-								<label>内容</label>
-								<textarea rows="12" name="content"><?php echo (($tmp = @$_smarty_tpl->tpl_vars['data']->value['content'])===null||$tmp==='' ? '' : $tmp);?>
+								<textarea rows="12" name="content" style="display:none;"><?php echo (($tmp = @$_smarty_tpl->tpl_vars['data']->value['content'])===null||$tmp==='' ? '' : $tmp);?>
 </textarea>
+								<script id="editor" type="text/plain"></script>
 							</fieldset>
 							<fieldset style="width:48%; float:left; margin-right: 3%;">
 								<label>作者</label>

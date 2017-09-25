@@ -1,8 +1,16 @@
 <?php
 	class indexController{
 		function index(){
-			VIEW::assign(array('title'=>'快乐的一天', 'author'=>'开心的一天'));
-			VIEW::display('test.html');
+		    $newsobj=M('news');
+		    $data=$newsobj->findAll_orderby_dateline();
+			VIEW::assign(array('data'=>$data));
+			VIEW::display('index.html');
+		}
+		function articlecontent(){
+		    $newsobj=M('news');
+		    $data=$newsobj->findOne_by_id($_GET['id']);
+			VIEW::assign(array('data'=>$data));
+			VIEW::display('articlecontent.html');
 		}
 	}
 ?>

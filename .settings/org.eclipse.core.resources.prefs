@@ -1,2 +1,6 @@
 eclipse.preferences.version=1
-encoding/<project>=UTF-8
+encoding//framework/libs/db/mysql.class.php=UTF-8
+encoding//libs/Controller/adminController.class.php=UTF-8
+encoding//libs/Controller/indexController.class.php=UTF-8
+encoding//libs/View/testView.class.php=UTF-8
+encoding/<project>=GBK
