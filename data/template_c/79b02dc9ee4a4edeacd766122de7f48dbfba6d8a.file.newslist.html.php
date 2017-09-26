@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.16, created on 2017-09-25 09:27:12
+<?php /* Smarty version Smarty-3.1.16, created on 2017-09-26 09:10:23
          compiled from "tpl\admin\newslist.html" */ ?>
 <?php /*%%SmartyHeaderCode:15668539d93e66b70b9-78548279%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '79b02dc9ee4a4edeacd766122de7f48dbfba6d8a' => 
     array (
       0 => 'tpl\\admin\\newslist.html',
-      1 => 1506331630,
+      1 => 1506416965,
       2 => 'file',
     ),
   ),
@@ -90,7 +90,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 			<!-- <a class="logout_user" href="#" title="Logout">Logout</a> -->
 		</div>
 		<div class="breadcrumbs_container">
-			<article class="breadcrumbs"><a href="admin.php?controller=admin">后台管理中心</a> <div class="breadcrumb_divider"></div> <a class="current">新闻管理列表</a></article>
+			<article class="breadcrumbs"><a href="index.php?controller=admin">后台管理中心</a> <div class="breadcrumb_divider"></div> <a class="current">新闻管理列表</a></article>
 		</div>
 	</section><!-- end of secondary bar -->
 
@@ -123,8 +123,8 @@ $_smarty_tpl->tpl_vars['value']->_loop = true;
 </td> 
 			    				<td><?php echo $_smarty_tpl->tpl_vars['value']->value['author'];?>
 </td> 
-			    				<td><input type="image" src="img/images/icn_edit.png" title="Edit" onclick="window.location.href='admin.php?controller=admin&method=newsadd&id=<?php echo $_smarty_tpl->tpl_vars['value']->value['id'];?>
-'"><input type="image" src="img/images/icn_trash.png" title="Trash" onclick="window.location.href='admin.php?controller=admin&method=newsdel&id=<?php echo $_smarty_tpl->tpl_vars['value']->value['id'];?>
+			    				<td><input type="image" src="img/images/icn_edit.png" title="Edit" onclick="window.location.href='index.php?controller=admin&method=newsadd&id=<?php echo $_smarty_tpl->tpl_vars['value']->value['id'];?>
+'"><input type="image" src="img/images/icn_trash.png" title="Trash" onclick="window.location.href='index.php?controller=admin&method=newsdel&id=<?php echo $_smarty_tpl->tpl_vars['value']->value['id'];?>
 '"></td>
 						</tr>
 					<?php }

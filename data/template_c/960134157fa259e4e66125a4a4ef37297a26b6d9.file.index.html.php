@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.16, created on 2017-09-25 07:06:24
+<?php /* Smarty version Smarty-3.1.16, created on 2017-09-26 09:10:20
          compiled from "tpl\admin\index.html" */ ?>
 <?php /*%%SmartyHeaderCode:5432539821a53b79f9-59459752%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '960134157fa259e4e66125a4a4ef37297a26b6d9' => 
     array (
       0 => 'tpl\\admin\\index.html',
-      1 => 1402835472,
+      1 => 1506416845,
       2 => 'file',
     ),
   ),
@@ -89,7 +89,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 			<!-- <a class="logout_user" href="#" title="Logout">Logout</a> -->
 		</div>
 		<div class="breadcrumbs_container">
-			<article class="breadcrumbs"><a href="admin.php?controller=admin">后台管理中心</a> <div class="breadcrumb_divider"></div> <a class="current">首页</a></article>
+			<article class="breadcrumbs"><a href="index.php?controller=admin">后台管理中心</a> <div class="breadcrumb_divider"></div> <a class="current">首页</a></article>
 		</div>
 	</section><!-- end of secondary bar -->
 	

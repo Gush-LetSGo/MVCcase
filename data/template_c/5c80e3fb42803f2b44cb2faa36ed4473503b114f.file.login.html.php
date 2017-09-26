@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.16, created on 2017-09-25 06:30:20
+<?php /* Smarty version Smarty-3.1.16, created on 2017-09-26 09:10:12
          compiled from "tpl\admin\login.html" */ ?>
 <?php /*%%SmartyHeaderCode:8914539827e3a95c38-66862379%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '5c80e3fb42803f2b44cb2faa36ed4473503b114f' => 
     array (
       0 => 'tpl\\admin\\login.html',
-      1 => 1402482678,
+      1 => 1506416909,
       2 => 'file',
     ),
   ),
@@ -84,7 +84,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 			<p>请在右侧登录</p>
 		</div>
 		<div class="breadcrumbs_container">
-			<article class="breadcrumbs"><a href="admin.php?controller=admin">后台管理中心</a> <div class="breadcrumb_divider"></div> <a class="current">登录</a></article>
+			<article class="breadcrumbs"><a href="index.php?controller=admin">后台管理中心</a> <div class="breadcrumb_divider"></div> <a class="current">登录</a></article>
 		</div>
 	</section><!-- end of secondary bar -->
 	
@@ -98,7 +98,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 	<section id="main" class="column">
 		
 		<h4 class="alert_info" style="width:46%">请使用您的用户名和密码在下面登录.</h4>
-		<form id="form1" name="form1" method="post" action="admin.php?controller=admin&method=login">
+		<form id="form1" name="form1" method="post" action="index.php?controller=admin&method=login">
 		<article class="module width_half">
 			<header><h3>管理员登录</h3></header>
 				<div class="module_content">

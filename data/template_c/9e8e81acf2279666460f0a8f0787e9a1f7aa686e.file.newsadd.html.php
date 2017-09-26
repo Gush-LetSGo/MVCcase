@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.16, created on 2017-09-25 09:54:50
+<?php /* Smarty version Smarty-3.1.16, created on 2017-09-26 09:10:27
          compiled from "tpl\admin\newsadd.html" */ ?>
 <?php /*%%SmartyHeaderCode:6331539d9265713ae2-57639055%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '9e8e81acf2279666460f0a8f0787e9a1f7aa686e' => 
     array (
       0 => 'tpl\\admin\\newsadd.html',
-      1 => 1506333288,
+      1 => 1506416928,
       2 => 'file',
     ),
   ),
@@ -102,7 +102,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
 	
 	<section id="main" class="column">
-		<form id="form1" name="form1" method="post" action="admin.php?controller=admin&method=newsadd">
+		<form id="form1" name="form1" method="post" action="index.php?controller=admin&method=newsadd">
 			<article class="module width_full">
 				<header><h3>发表新文章</h3></header>
 					<div class="module_content">

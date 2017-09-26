@@ -3,4 +3,6 @@ encoding//framework/libs/db/mysql.class.php=UTF-8
 encoding//libs/Controller/adminController.class.php=UTF-8
 encoding//libs/Controller/indexController.class.php=UTF-8
 encoding//libs/View/testView.class.php=UTF-8
-encoding/<project>=GBK
+encoding//tpl/admin/index.html=UTF-8
+encoding//tpl/admin/leftmenu.html=UTF-8
+encoding/<project>=UTF-8

@@ -6,7 +6,7 @@
 		public function __construct(){
 			session_start();
 			if(!(isset($_SESSION['auth']))&&(PC::$method!='login')){
-				$this->showmessage('请登录后在操作！', 'admin.php?controller=admin&method=login');
+				$this->showmessage('请登录后在操作！', 'index.php?controller=admin&method=login');
 			}else{
 				$this->auth = isset($_SESSION['auth'])?$_SESSION['auth']:array();
 			}
@@ -28,7 +28,7 @@
 
 		public function logout(){
 			unset($_SESSION['auth']);
-				$this->showmessage('退出成功！', 'admin.php?controller=admin&method=login');
+				$this->showmessage('退出成功！', 'index.php?controller=admin&method=login');
 		}
 
 		public function newsadd(){
@@ -50,22 +50,22 @@
 		public function newsdel(){
 			if($_GET['id']){
 				$this->delnews();
-				$this->showmessage('删除新闻成功！', 'admin.php?controller=admin&method=newslist');
+				$this->showmessage('删除新闻成功！', 'index.php?controller=admin&method=newslist');
 			}
 		}
 
 		private function checklogin(){
 			if(empty($_POST['username'])||empty($_POST['password'])){
-				$this->showmessage('登录失败！', 'admin.php?controller=admin&method=login');
+				$this->showmessage('登录失败！', 'index.php?controller=admin&method=login');
 			}
 			$username = daddslashes($_POST['username']);
 			$password = daddslashes($_POST['password']);
 			$authobj = M('auth');
 			if($auth = $authobj->checkauth($username, $password)){
 				$_SESSION['auth'] = $auth;
-				$this->showmessage('登录成功！', 'admin.php?controller=admin&method=index');
+				$this->showmessage('登录成功！', 'index.php?controller=admin&method=index');
 			}else{
-				$this->showmessage('登录失败！', 'admin.php?controller=admin&method=login');
+				$this->showmessage('登录失败！', 'index.php?controller=admin&method=login');
 			}
 		}
 
@@ -92,7 +92,7 @@
 		private function newssubmit(){
 			extract($_POST);				
 			if(empty($title)||empty($content)){
-				$this->showmessage('请把新闻标题、内容填写完整再提交！', 'admin.php?controller=admin&method=newsadd');
+				$this->showmessage('请把新闻标题、内容填写完整再提交！', 'index.php?controller=admin&method=newsadd');
 			}
 			$title = daddslashes($title);
 			$content = daddslashes($content);
@@ -108,10 +108,10 @@
 			);
 			if($_POST['id']!=''){
 				$newsobj ->update($data, intval($_POST['id']));
-				$this->showmessage('修改成功！', 'admin.php?controller=admin&method=newslist');
+				$this->showmessage('修改成功！', 'index.php?controller=admin&method=newslist');
 			}else{
 				$newsobj ->insert($data);
-				$this->showmessage('添加成功！', 'admin.php?controller=admin&method=newslist');
+				$this->showmessage('添加成功！', 'index.php?controller=admin&method=newslist');
 			}
 		}
 
