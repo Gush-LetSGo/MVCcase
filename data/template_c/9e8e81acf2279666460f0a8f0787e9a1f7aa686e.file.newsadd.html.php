@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.16, created on 2017-09-26 09:10:27
+<?php /* Smarty version Smarty-3.1.16, created on 2017-09-27 03:25:22
          compiled from "tpl\admin\newsadd.html" */ ?>
 <?php /*%%SmartyHeaderCode:6331539d9265713ae2-57639055%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '9e8e81acf2279666460f0a8f0787e9a1f7aa686e' => 
     array (
       0 => 'tpl\\admin\\newsadd.html',
-      1 => 1506416928,
+      1 => 1506482673,
       2 => 'file',
     ),
   ),
@@ -26,55 +26,56 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <?php if ($_valid && !is_callable('content_539d92657c0ec8_21720221')) {function content_539d92657c0ec8_21720221($_smarty_tpl) {?><!doctype html>
 <html>
 <head>
-	<meta charset="utf-8"/>
-	<title>后台管理系统</title>
-	
-	<link rel="stylesheet" href="img/css/layout.css" type="text/css" media="screen" />
-	<!--[if lt IE 9]>
-	<link rel="stylesheet" href="img/css/ie.css" type="text/css" media="screen" />
-	<script src="img/js/html5.js"></script>
-	<![endif]-->
-	<script src="img/js/jquery-1.5.2.min.js" type="text/javascript"></script>
-	<script src="img/js/hideshow.js" type="text/javascript"></script>
-	<script src="img/js/jquery.tablesorter.min.js" type="text/javascript"></script>
-	<script type="text/javascript" src="img/js/jquery.equalHeight.js"></script>
-	<script charset="utf-8" src="img/js/ueditor/ueditor.config.js"></script>
-	<script charset="utf-8" src="img/js/ueditor/ueditor.all.js"> </script>
-	<script charset="utf-8" src="img/js/ueditor/lang/zh-cn/zh-cn.js"></script>
-	<script type="text/javascript">
-	$(document).ready(function() 
-    	{ 
-      	  $(".tablesorter").tablesorter(); 
-   	 } 
-	);
-	$(document).ready(function() {
+<meta charset="utf-8"/>
+<title>后台管理系统</title>
 
+<link rel="stylesheet" href="img/css/layout.css" type="text/css" media="screen" />
+<!--[if lt IE 9]>
+<link rel="stylesheet" href="img/css/ie.css" type="text/css" media="screen" />
+<script src="img/js/html5.js"></script>
+<![endif]-->
+<script src="img/js/jquery-1.5.2.min.js" type="text/javascript"></script>
+<script src="img/js/hideshow.js" type="text/javascript"></script>
+<script src="img/js/jquery.tablesorter.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="img/js/jquery.equalHeight.js"></script>
+<script charset="utf-8" src="img/js/ueditor/ueditor.config.js"></script>
+<script charset="utf-8" src="img/js/ueditor/ueditor.all.js"> </script>
+<script charset="utf-8" src="img/js/ueditor/lang/zh-cn/zh-cn.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	
+   	$(".tablesorter").tablesorter(); 
+   	
 	//When page loads...
 	$(".tab_content").hide(); //Hide all content
 	$("ul.tabs li:first").addClass("active").show(); //Activate first tab
 	$(".tab_content:first").show(); //Show first tab content
 
 	//On Click Event
-	$("ul.tabs li").click(function() {
-
+	$("ul.tabs li").click(function(){
 		$("ul.tabs li").removeClass("active"); //Remove any "active" class
 		$(this).addClass("active"); //Add "active" class to selected tab
 		$(".tab_content").hide(); //Hide all tab content
-
 		var activeTab = $(this).find("a").attr("href"); //Find the href attribute value to identify the active tab + content
 		$(activeTab).fadeIn(); //Fade in the active ID content
 		return false;
 	});
-
-});
-    </script>
-    <script type="text/javascript">
-    $(function(){
-        $('.column').equalHeight();
-    });
-    
+	
+	$('.column').equalHeight();
+	
     var ue = UE.getEditor('editor');
-	</script>
+    
+    
+	$("#submit_bt").click(function(){
+		var articleContent=ue.getContent();
+		console.log(articleContent);
+		$("#form1 textarea").text(articleContent);
+		$("#form1").submit();
+	})
+    
+    
+});
+</script>
 
 </head>
 
@@ -131,7 +132,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 					<div class="submit_link">
 						<input type="hidden" name="id" value="<?php echo (($tmp = @$_smarty_tpl->tpl_vars['data']->value['id'])===null||$tmp==='' ? '' : $tmp);?>
 ">
-						<input type="submit" name="submit" value="发布" class="alt_btn">
+						<input id="submit_bt" type="button" name="" value="发布" class="alt_btn">
 					</div>
 				</footer>
 			</article>
@@ -141,5 +142,4 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
 
 </body>
-
 </html><?php }} ?>

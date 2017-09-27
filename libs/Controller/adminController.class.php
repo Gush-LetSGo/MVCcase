@@ -32,7 +32,7 @@
 		}
 
 		public function newsadd(){
-			if(!isset($_POST['submit'])){
+			if(!isset($_POST['title'])){
 				$data = $this->getnewsinfo();
 				VIEW::assign(array('data'=>$data));
 				VIEW::display('admin/newsadd.html');
