@@ -73,7 +73,9 @@
 			if(isset($_GET['id'])){
 				$id = intval($_GET['id']);
 				$newsobj = M('news');
-				return $newsobj->findOne_by_id($id);
+				$data = $newsobj->findOne_by_id($id);
+				$data = filterSlash($data);
+				return $data;
 			}else{
 				return array();
 			}

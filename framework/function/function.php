@@ -18,7 +18,7 @@
 		return $obj;
 	}
 	
-	function ORG($path, $name, $params=array()){// path ÊÇÂ·¾¶  nameÊÇµÚÈý·½ÀàÃû params ÊÇ¸ÃÀà³õÊ¼»¯µÄÊ±ºòÐèÒªÖ¸¶¨¡¢¸³ÖµµÄÊôÐÔ£¬¸ñÊ½Îª array(ÊôÐÔÃû=>ÊôÐÔÖµ, ÊôÐÔÃû2=>ÊôÐÔÖµ2¡­¡­)
+	function ORG($path, $name, $params=array()){// path ï¿½ï¿½Â·ï¿½ï¿½  nameï¿½Çµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ params ï¿½Ç¸ï¿½ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ÒªÖ¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½Ô£ï¿½ï¿½ï¿½Ê½Îª array(ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½=>ï¿½ï¿½ï¿½ï¿½Öµ, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½2=>ï¿½ï¿½ï¿½ï¿½Öµ2ï¿½ï¿½ï¿½ï¿½)
 		require_once('libs/ORG/'.$path.$name.'.class.php');
 		//eval('$obj = new '.$name.'();');
 		$obj = new $name();
@@ -30,9 +30,17 @@
 		}
 		return $obj;
 	}
-
+    //ç»™å¼•å·æ·»åŠ åæ–œæ 
 	function daddslashes($str){
-		return (!get_magic_quotes_gpc())?addslashes($str):$str;
+	    return (!get_magic_quotes_gpc())?addslashes($str):$str;
 	}
+    //åŽ»æŽ‰æ•°ç»„é‡Œçš„å„ä¸ªvalueé‡Œçš„åæ–œæ 
+	function filterSlash($arr){
+	    while(list($k,$v) = each($arr)){
+	        $arr[$k]=stripslashes($arr[$k]);
+	    }
+	    return $arr;
+	}
+	
 
 ?>

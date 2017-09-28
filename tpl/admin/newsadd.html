@@ -87,7 +87,9 @@ $(document).ready(function() {
 							</fieldset>
 							<fieldset>
 								<textarea rows="12" name="content" style="display:none;">{$data.content|default:''}</textarea>
-								<script id="editor" type="text/plain"></script>
+								<script id="editor" type="text/plain">
+									{$data.content|default:''}
+								</script>
 							</fieldset>
 							<fieldset style="width:48%; float:left; margin-right: 3%;">
 								<label>作者</label>

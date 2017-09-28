@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.16, created on 2017-09-25 09:01:09
+<?php /* Smarty version Smarty-3.1.16, created on 2017-09-28 02:13:24
          compiled from "tpl\index.html" */ ?>
 <?php /*%%SmartyHeaderCode:646759c8c17d45a4d3-11675354%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '42a0998f5823a79eaa4328aafa51f4bc5f2403f4' => 
     array (
       0 => 'tpl\\index.html',
-      1 => 1506330063,
+      1 => 1506564799,
       2 => 'file',
     ),
   ),
@@ -36,6 +36,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
 
 <body>
+<a href="index.php?controller=admin&method=index">后台登录</a>
 <table class="tablesorter" cellspacing="0" style="margin:0"> 
 	<thead> 
 		<tr>  

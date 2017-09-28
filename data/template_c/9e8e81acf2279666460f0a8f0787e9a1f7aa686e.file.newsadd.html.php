@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.16, created on 2017-09-27 03:25:22
+<?php /* Smarty version Smarty-3.1.16, created on 2017-09-28 06:42:43
          compiled from "tpl\admin\newsadd.html" */ ?>
 <?php /*%%SmartyHeaderCode:6331539d9265713ae2-57639055%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '9e8e81acf2279666460f0a8f0787e9a1f7aa686e' => 
     array (
       0 => 'tpl\\admin\\newsadd.html',
-      1 => 1506482673,
+      1 => 1506580961,
       2 => 'file',
     ),
   ),
@@ -115,7 +115,10 @@ $(document).ready(function() {
 							<fieldset>
 								<textarea rows="12" name="content" style="display:none;"><?php echo (($tmp = @$_smarty_tpl->tpl_vars['data']->value['content'])===null||$tmp==='' ? '' : $tmp);?>
 </textarea>
-								<script id="editor" type="text/plain"></script>
+								<script id="editor" type="text/plain">
+									<?php echo (($tmp = @$_smarty_tpl->tpl_vars['data']->value['content'])===null||$tmp==='' ? '' : $tmp);?>
+
+								</script>
 							</fieldset>
 							<fieldset style="width:48%; float:left; margin-right: 3%;">
 								<label>作者</label>
